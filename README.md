@@ -43,9 +43,11 @@ las herramientas que se utilizaron para crear este proyecto son:
 - [HTML] - Usada para el contenido de la pagina web.
 - [CSS] - Usada para estilos al contenido de la pagina.
 - [JavaScript] - usada para el funcionamiento de la pagina.
+- [Node.js] - Entorno de ejecución para JavaScript y gestor de paquetes.
 
 ## Herramientras extras
-- Framework
+- Frameworks:
+-- Tailwind
 
 
 ## Authors✒️
