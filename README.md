@@ -10,7 +10,7 @@ Mira Deployment para conocer como desplegar el proyecto.
 ## Carta grafica ✍️
 
  Se diseño una carta grafica para asignar un logo tipografias y paleta de color para el diseño de la pagina
-![Diseño](Img/Carta Grafica.png)
+![Diseño] (Img/Carta Grafica.png)
 
 ### Pre-requisitos 📋
 
