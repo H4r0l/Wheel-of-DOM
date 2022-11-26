@@ -7,6 +7,11 @@ Estas instrucciones te permitirán obtener una copia del proyecto en tu disposit
 
 Mira Deployment para conocer como desplegar el proyecto.
 
+## Carta grafica ✍️
+
+ Se diseño una carta grafica para asignar un logo tipografias y paleta de color para el diseño de la pagina
+![Diseño](Img/Carta Grafica.png)
+
 ### Pre-requisitos 📋
 
 Que cosas necesitas para instalar el software y como verla en el dispositivo local.
