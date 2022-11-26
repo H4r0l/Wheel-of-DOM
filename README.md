@@ -53,4 +53,4 @@ las herramientas que se utilizaron para crear este proyecto son:
 ## Authors✒️
 - [@HarolUrrea](https://github.com/H4r0l)
 - [@SoffiaSanchezz](https://github.com/SoffiaSanchezz).
-- [@lily]().
+- [@LilyCastillo](https://github.com/lilajoha29).
