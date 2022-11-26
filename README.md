@@ -10,7 +10,7 @@ Mira Deployment para conocer como desplegar el proyecto.
 ## Carta grafica ✍️
 
  Se diseño una carta grafica para asignar un logo tipografias y paleta de color para el diseño de la pagina
-![Diseño](Img/Carta Grafica.png)
+![Diseño](https://github.com/H4r0l/Wheel-of-DOM/blob/25302d1ec2224e15f79337155d55eb710c52a094/Img/Carta%20Grafica.png)
 
 ### Pre-requisitos 📋
 
