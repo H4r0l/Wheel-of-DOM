@@ -1,5 +1,5 @@
-# Wheel-of-DOM
-En el trabajo que estás actualmente con tus compañeros llevan trabajando menos de un mes, su llegada representa un gran apoyo para la empresa pero en los últimos días han notado que el ambiente en la oficina se ha puesto un poco pesado, el lider del personal ha percibido esta situación por esta razón propuso ideas con el coordinador del proyecto y los ha elegido a ustedes para desarrollar una aplicación novedosa que se utilizara como actividad grupal para desahogar las penas con una actividad divertida y relajante.
+# Wheel-of-DOM 🎡
+En una empresa los últimos días han notado que el ambiente en la oficina se ha puesto un poco pesado, el lider del personal ha percibido esta situación por esta razón propuso ideas con el coordinador del proyecto y se desarrollara una aplicación novedosa que se utilizara como actividad grupal para desahogar las penas con una actividad divertida y relajante y mejorar el ambiente laboral.
 
 ## Comenzando 🚀
 
