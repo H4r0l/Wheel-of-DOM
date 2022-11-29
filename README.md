@@ -26,8 +26,10 @@ Que cosas necesitas para instalar el software y como verla en el dispositivo loc
 - Abrir el clon
 
 ```bash
-  -Ya colonado el despliege los abres en cualquier navegador asi vez la pagina web finalizada.
+  -Ya clonado el despliege los abres en cualquier navegador asi vez la pagina web finalizada.
 ```
+- Instalar Modulos & Dependencias: 
+``` npm install package.json ```
 ### Instalación 🔧
 
 - Como se debe observar en el despliegue
