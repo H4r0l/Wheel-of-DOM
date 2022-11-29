@@ -10,7 +10,8 @@ Mira Deployment para conocer como desplegar el proyecto.
 ## Carta grafica ✍️
 
  Se diseño una carta grafica para asignar un logo tipografias y paleta de color para el diseño de la pagina
-![Carta Grafica](https://user-images.githubusercontent.com/65699208/204419509-1e6e9a48-ad61-48cb-aa19-d25dba824025.png)
+ 
+![Carta Grafica](https://github.com/H4r0l/Wheel-of-DOM/blob/73a8fc9cc9e3048b13020b469ed37f4d721a6e4b/Img/Carta%20Grafica.png)
 
 ### Pre-requisitos 📋
 
@@ -52,7 +53,7 @@ las herramientas que se utilizaron para crear este proyecto son:
 - [JavaScript] - usada para el funcionamiento de la pagina.
 - [Node.js] - Entorno de ejecución para JavaScript y gestor de paquetes.
 
-## Herramientras extras
+## Herramientras extras 🔧
 - Frameworks:
 -- Tailwind
 
