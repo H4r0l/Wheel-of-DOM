@@ -1,4 +1,4 @@
-// import { default as Swal } from "sweetalert2";
+
 
 let victimas = [];
 
@@ -63,47 +63,7 @@ function guardarEnStorage(object) {
     localStorage.setItem("victimasKey", JSON.stringify(victimaLocal));
 }
 
-class Juego {
 
-    constructor() {
-        this.init();
-    }
-
-
-    init() {
-        this.mensajeVentanaInicio();
-    }
-
-
-    mensajeVentanaInicio() {
-        Swal.fire({
-            imageUrl: '/src/pixil-frame-alerts.png',
-            imageWidth: 100,
-            imageHeight: 100,
-            imageAlt: 'Custom image',
-            title: '¡Bienvenido!',
-            text: "Ingresa los nombres de las victimas:",
-            input: 'text',
-            inputLabel: 'Nombre de la victima',
-            inputPlaceholder: 'Nombre:',
-            // inputAttributes: {
-            //     autocapitalize: 'off'
-            // },
-            showCancelButton: true,
-            confirmButtonColor: '#034C8C',
-            cancelButtonColor: '#D9AD29',
-            confirmButtonText: 'Agregar',
-            cancelButtonText: 'Inicio',
-            backdrop: '#939292'
-            
-
-        });
-    }
-
-    
-}
-
-const game = new Juego();
 
 
     
