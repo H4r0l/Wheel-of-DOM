@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'brick': "url('./Img/peakpx.jpg)"
+      },
+      fontFamily: {
+        Alexandria: ['"Alexandria","sans-serif"'],
+        PirataOne: ['"Pirata One", cursive'] 
       }
     },
   },
