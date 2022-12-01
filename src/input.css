@@ -5,3 +5,7 @@
 body{
     background-image: url(../Img/peakpx.jpg );
 }
+.orca{
+    display: flex;
+    align-content:center;
+}
