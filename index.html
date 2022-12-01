@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="./public/output.css">
-    <link href="./Img/LogoWhite.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="./src/input.css">
-
+    <script src="/sweetalert2.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/output.css">
     
@@ -15,19 +11,30 @@
     
 </head>
 
-<body class="bg-gray-800">
 
-    <h1>hello world</h1>
+<body style="background-image: url(./Img/peakpx.jpg);">
 
-    <!-- <script>
-        swal({
-            title: "good job!",
-            text: "you clicked the button!",
-            icon: "success",
-            button: "aww yiss",
-        })
-    </script> -->
+    
+    <div class="">
+        <img src="/src/pixil-frame-alerts.png" class="">
+        <h1 class="">¡Bienvenido!</h1>
+        <p class="">Ingresa los nombres de las victimas:</p>
+        <input id="inputVictima" type="text" placeholder="Nombre:">
+        <button id="agregar">Agregar</button>
+        <a href="/horca.html">
+            <button id="inicio" >Inicio</button>
+        </a>
+        <div  class="">
+            <li id="listaVictimas">
+                <p class="victima"> </p>
+                <button id="borrarVictima" class="borraVictima">caneca</button>
+            </li>
+        </div>
 
+    </div>
 </body>
 <script type="module" src="public/index.js"></script>
+
+
+
 </html>
