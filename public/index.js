@@ -1,3 +1,4 @@
+
 //
 swal({
         title: "¡Bienvenido!",
@@ -12,4 +13,7 @@ swal({
             closeModal: false,
         },
     })
+
+=======
+import swal from 'sweetalert'
 
