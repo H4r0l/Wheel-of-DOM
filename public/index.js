@@ -17,7 +17,7 @@ agregarVictima.addEventListener("click", (ingresar) => {
 
     let ingresoVictima = victimas.length;
 
-    let nombreVictima = inputVictimas.ariaValueMax;
+    let nombreVictima = inputVictimas.value;
     if (inputVictimas.value == "") {
         alert("ingrese el nombre de una victima");
     } else {
@@ -30,6 +30,8 @@ agregarVictima.addEventListener("click", (ingresar) => {
     inputVictimas.value = "";
     render();
     guardarEnStorage(victimas);
+    console.log(victimas)
+    console.log(nombreVictima)
 })
 
 const render = () => {
@@ -67,22 +69,6 @@ function guardarEnStorage(object) {
 
 
 
-
-=======
-//
-swal({
-        title: "¡Bienvenido!",
-        text: "Ingresa los nombres de las victimas:",
-        content: "input",
-        button: {
-            text: "Agregar",
-            closeModal: false,
-        },
-        button: {
-            text: "Inicio",
-            closeModal: false,
-        },
-    })
 
 
 
