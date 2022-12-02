@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'brick': "url('./Img/peakpx.jpg)"
+      }
+    },
   },
   plugins: [],
 }
