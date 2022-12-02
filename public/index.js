@@ -40,7 +40,7 @@ const render = () => {
     victimas.forEach(
         (victima) =>
         (htmlVictimas += `<li >
-                <p class="victima">${victima.playName} </p>
+                <p class="victima font-pirataOne">${victima.playName} </p>
                 <button id="borrarVictima" class="borraVictima" id="${victima.id}">caneca</button>
             </li>"`)
     );
@@ -66,11 +66,9 @@ function guardarEnStorage(object) {
 
 
 
-
-
-=======
 //
 swal({
+
         title: "¡Bienvenido!",
         text: "Ingresa los nombres de las victimas:",
         content: "input",
@@ -83,7 +81,5 @@ swal({
             closeModal: false,
         },
     })
-
-
 
 
