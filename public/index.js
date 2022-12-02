@@ -82,6 +82,4 @@ swal({
         },
     })
 
-=======
-import swal from 'sweetalert'
 
