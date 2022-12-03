@@ -65,10 +65,6 @@ function guardarEnStorage(object) {
 
 
 
-
-
-
-=======
 //
 swal({
         title: "¡Bienvenido!",
