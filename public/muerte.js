@@ -33,6 +33,16 @@ function muerteVictima() {
 
     }
 };
+//animacion duracion 
+const imgPlayer = document.getElementById("animacion");
+let sonidoHorca = new Audio("../sonidos/inicio.piratas.mp3")
+
+function fallecidoGif() {
+    imgPlayer.classList.remove("transleft");
+    imgPlayer.classList.add("transdown");
+    setTimeout( 1700);
+    sonidoHorca.play();
+};
 
 const sacrificarButton = document.getElementById("sacrificar");
 sacrificarButton.addEventListener("click", animacionMuerte);
@@ -45,7 +55,7 @@ function animacionMuerte() {
         open.classList.remove('vibrate_kill');
         // sonidoMuere.play(1)
         fallecidoGif();
-        horca();
+        // horca();
         changeGiff(true);
         
 
@@ -68,7 +78,7 @@ function nuevaVigtima() {
 function soloKill(nombreMuerto) {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        ImageWigth: '200px',
+        ImageWigth: '50px',
         html: '<h1 class=""> ${nombreVictimaAMorir} Fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
@@ -105,21 +115,12 @@ function gameOver() {
         imageHeight: '250px',
         });
         setTimeout(showModal, 2000)
-        fallecidoGit();
-        horca();
+        fallecidoGif();
+        // horca();
         changeGiff(true);
     };
 };
-//animacion duracion 
-const imgPlayer = document.getElementById("animacion");
-let sonidoHorca = new Audio("../sonidos/inicio.piratas.mp3")
 
-function fallecidoGit() {
-    imgPlayer.classList.remove("transleft");
-    imgPlayer.classList.add("transdown");
-    setTimeout( 1700);
-    sonidoHorca.play();
-};
 // animacion de censurado 
 const censurado = document.getElementById("animacion");
 
