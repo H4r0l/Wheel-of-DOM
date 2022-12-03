@@ -43,7 +43,7 @@ const render = () => {
         (victima) =>
         (htmlVictimas += `<li >
                 <p class="victima">${victima.playName} </p>
-                <button id="borrarVictima" class="borraVictima" id="${victima.id}">caneca</button>
+                <button class="borraVictima" id="${victima.id}" >caneca</button>
             </li>"`)
     );
     totalVictimas.innerHTML = htmlVictimas;
@@ -51,13 +51,15 @@ const render = () => {
 };
 const borrarButton = (e) => {
     let eliminaVictima = document.querySelectorAll(".borraVictima");
-
+    console.log(eliminaVictima)
     eliminaVictima.forEach((botonCaneca) =>
         botonCaneca.addEventListener("click", eliminarVictima)
     );
+    
 };
 
 render();
+
 
 function guardarEnStorage(object) {
     let victimaLocal = object;

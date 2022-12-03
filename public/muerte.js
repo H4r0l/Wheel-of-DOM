@@ -69,17 +69,20 @@ function soloKill(nombreMuerto) {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
         ImageWigth: '200px',
-        html: '<h1 class=""> ${nombreMuerto} Fue Sacrificada </h1>',
+        html: '<h1 class=""> ${nombreVictimaAMorir} Fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
-        backdrop: '#034C8C',
+        backdrop: `
+        #BFBFBF
+        left top
+        no-repeat
+        `,
         position: 'center',
     });
-    confirmButton.addEventListener("click", () => {
-        modal_container.classList.remove("show");
-        imgPlayer.classList.add("shadow");
-    });
-    modal_container.classList.add("show");
+    // modal_container.classList.remove("show");
+    imgPlayer.classList.add("shadow");
+    
+    // modal_container.classList.add("show");
 };
 const open = document.getElementById("sacrificar");
 
@@ -92,7 +95,11 @@ function gameOver() {
         html: '<h1 class=""> Ya No Hay Nadie <br></br> Para Sacrificar </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'EMPEZAR DE NUEVO ',
-        backdrop: '#034C8C',
+        backdrop: `
+        #BFBFBF
+        left top
+        no-repeat
+        `,
         position: 'center',
         imageUrl: '/src/logos.png',
         imageHeight: '250px',
