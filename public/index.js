@@ -42,8 +42,13 @@ const render = () => {
     victimas.forEach(
         (victima) =>
         (htmlVictimas += `<li >
+<<<<<<< HEAD
                 <p class="victima">${victima.playName} </p>
                 <button class="borraVictima" id="${victima.id}" >caneca</button>
+=======
+                <p class="victima font-pirataOne">${victima.playName} </p>
+                <button id="borrarVictima" class="borraVictima" id="${victima.id}">caneca</button>
+>>>>>>> e2549154b9d0bf7cd5ebc41a681269921ab69bc0
             </li>"`)
     );
     totalVictimas.innerHTML = htmlVictimas;
@@ -70,8 +75,20 @@ function guardarEnStorage(object) {
 
 
 
+swal({
 
-
+        title: "¡Bienvenido!",
+        text: "Ingresa los nombres de las victimas:",
+        content: "input",
+        button: {
+            text: "Agregar",
+            closeModal: false,
+        },
+        button: {
+            text: "Inicio",
+            closeModal: false,
+        },
+    })
 
 
 
