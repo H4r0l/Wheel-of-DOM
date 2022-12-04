@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/output.css">
     <link href="img/LogoWhite.png" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alexandria&family=Pirata+One&display=swap" rel="stylesheet">
     <title>Wheel of DOM</title>
     
 </head>
@@ -15,21 +16,22 @@
 
     
     <div class="border-double border-4 border-indigo-800 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg ">
-        <img src="/src/pixil-frame-alerts.png" class="" width="50%">
-        <div class="bg-white border-solid border-2 border-indigo-800 rounded-lg p-1">
+        <div class="">
+            <img src="/src/pixil-frame-alerts.png" class="" width="50%">
+        </div>
+        <div class="bg-white border-solid border-2 border-indigo-800 rounded-lg p-1 content-end">
         <h1 class="font-PirataOne text-4xl text-center">¡Bienvenido!</h1>
         <p class="font-PirataOne text-center">Ingresa los nombres de las victimas:</p>
         </div>
-        <input id="inputVictima" type="text" placeholder="Nombre:">
+        <input id="inputVictima"  type="text" placeholder="Nombre:" class="p-2 m-2 rounded-lg">
         <button id="agregar" class="p-2 font-Alexandria bg-sky-900 text-white rounded-lg shadow-lg shadow-indigo-500/50 hover:bg-sky-500">Agregar</button>
         <a href="/horca.html">
             <button id="inicio" class="font-Alexandria bg-yellow-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 hover:bg-yellow-700">Inicio</button>
         </a>
-        <div  class="">
-            <li id="listaVictimas">
+        <div class="block">
+            <li id="listaVictimas" class="inline-flex list-none ">
                 <p class="victima"> </p>
-
-                <button id="borrarVictima" class="borraVictima">caneca🗑️</button>
+                <button id="borrarVictima" class="borraVictima"></button>
 
             </li>
         </div>

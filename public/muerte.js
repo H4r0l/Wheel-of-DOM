@@ -13,11 +13,11 @@ let victimaSacrificada = "";
 function muerteVictima() {
     if (listaVivos.length > 0) {
         
-        let listaAleatoria = 0 + Math.floor(Math.random() * listaVivos.length);
+        let listaAleatoria = Math.floor(Math.random() * listaVivos.length);
 
-        let nombreVictimaAMorir = listaVivos[listaAleatoria].playerName;
+        let nombreVictimaAMorir = listaVivos[listaAleatoria].playName;
 
-        victimaSacrificada = listaVivos[listaAleatoria].playerName;
+        victimaSacrificada = listaVivos[listaAleatoria].playName;
 
         console.log(nombreVictimaAMorir);
 
@@ -53,7 +53,7 @@ function animacionMuerte() {
     if (listaVivos.length > 0) {
         setTimeout(soloKill, 1700, victimaSacrificada);
         open.classList.remove('vibrate_kill');
-        sonidoMuere.play(1)
+        
         fallecidoGif();
         // horca();
         changeGiff(true);
