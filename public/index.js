@@ -1,5 +1,4 @@
 
-
 let victimas = [];
 
 const eliminarVictima = (eliminar) => {
@@ -19,7 +18,7 @@ agregarVictima.addEventListener("click", (ingresar) => {
 
     let nombreVictima = inputVictimas.value;
     if (inputVictimas.value == "") {
-        alert("ingrese el nombre de una victima");
+        setTimeout(alerta, 800);        
     } else {
         victimas.push({
             id: ingresoVictima,
@@ -33,7 +32,21 @@ agregarVictima.addEventListener("click", (ingresar) => {
     console.log(victimas)
     console.log(nombreVictima)
 })
-
+//alerta
+function alerta() {
+    Swal.fire({
+        imageUrl: '/src/pixil-frame-alerts.png',
+        imageWigth: '20px',
+        html: '<h1 class="font-PirataOne text-black"> ingrese el nombre de una victima </h1>',
+        confirmButtonColor: '#034C8C',
+        position: 'center',
+        background: '#009FDE',
+    });
+    
+    imgPlayer.classList.add("shadow");
+    
+    
+};
 const render = () => {
     let htmlVictimas = ``;
 

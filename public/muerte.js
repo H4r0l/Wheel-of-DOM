@@ -4,7 +4,6 @@
 
 let victimas = JSON.parse(localStorage.getItem("victimasKey"));
 
-
 let listaVivos = victimas;
 let listaMuertos = [];
 let victimaSacrificada = "";
