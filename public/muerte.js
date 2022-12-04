@@ -14,17 +14,18 @@ let victimaSacrificada = "";
 function muerteVictima() {
     if (listaVivos.length > 0) {
         
-        let listaAleatoria = Math.floor(Math.random() * listaVivos.length);
+        let medida = listaVivos-length + 1
+        let indice = Math.floor(Math.random() * medida);
 
-        let nombreVictimaAMorir = listaVivos[listaAleatoria].playName;
+        let nombreVictimaAMorir = listaVivos[indice].playName;
 
-        victimaSacrificada = listaVivos[listaAleatoria].playName;
+        victimaSacrificada = listaVivos[indice].playName;
 
         console.log(nombreVictimaAMorir);
 
-        listaMuertos.push(listaVivos[listaAleatoria]);
+        listaMuertos.push(listaVivos[indice]);
 
-        listaVivos.splice(listaAleatoria, 1);
+        listaVivos.splice(indice, 1);
 
         console.log(listaVivos);
         
@@ -62,20 +63,26 @@ sacrificarButton.addEventListener("click", animacionMuerte);
 let sonidoMuere = new Audio("../sonidos/horror.mp3")
 
 function animacionMuerte() {
-    if (listaVivos.length > 0) {
-        setTimeout(soloKill, 1700, victimaSacrificada);
-        open.classList.remove('vibrate_kill');
-        sonidoMuere.play()
-        fallecidoGif();
-        changeGiff(true);
-        setTimeout(changeGiff, 1000);
 
-    } else {
-        gameOver();
-        sacrificarButton.classList.add("shadow")
-    }
-    console.log(victimaSacrificada)
+    setTimeout(soloKill, 1700, victimaSacrificada);
+    open.classList.remove('vibrate_kill');
+    sonidoMuere.play()
+    fallecidoGif();
+    changeGiff(true);
+    setTimeout(changeGiff, 1000);
+
 };
+function muerte(indice){
+    if(listaVivos > 0){
+        animacionMuerte();
+        listaVivos.splice(indice,1);
+        let nombreMuerto = indice; 
+    }else
+    gameOver();
+    sacrificarButton.classList.add("shadow")
+
+
+}
 
 function nuevaVigtima() {
     imgPlayer.classList.remove("shadow");
@@ -90,7 +97,7 @@ function soloKill(nombreMuerto) {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
         imageWigth: '20px',
-        html: '<h1 class="font-PirataOne text-black"> La victima fue Sacrificada </h1>',
+        html: '<h1 class="font-PirataOne text-black"> $nombreMuerto  fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
         position: 'center',
