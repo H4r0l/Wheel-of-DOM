@@ -23,7 +23,7 @@ agregarVictima.addEventListener("click", (ingresar) => {
     } else {
         victimas.push({
             id: ingresoVictima,
-            playName: nombreVictima,
+            playerName: nombreVictima,
             isDead: false,
         });
     }
@@ -42,8 +42,8 @@ const render = () => {
     victimas.forEach(
         (victima) =>
         (htmlVictimas += `<li >
-                <p class="victima">${victima.playName} </p>
-                <button class="borraVictima" id="${victima.id}" >caneca</button>
+                <p class="victima">${victima.playerName} </p>
+                <button class="borraVictima" id="${victima.id}" >🗑️</button>
             </li>"`)
     );
     totalVictimas.innerHTML = htmlVictimas;
@@ -70,20 +70,6 @@ function guardarEnStorage(object) {
 
 
 
-swal({
-
-        title: "¡Bienvenido!",
-        text: "Ingresa los nombres de las victimas:",
-        content: "input",
-        button: {
-            text: "Agregar",
-            closeModal: false,
-        },
-        button: {
-            text: "Inicio",
-            closeModal: false,
-        },
-    })
 
 
 
