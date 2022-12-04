@@ -2,8 +2,8 @@
 let victimas = [];
 
 const eliminarVictima = (eliminar) => {
-    let borrar = eliminar.target.id;
-    victimas = victimas.filter((victima) => victima.id != borrar);
+    let borrar = eliminar.target.playerName;
+    victimas = victimas.filter((victima) => victima.playerName != borrar);
     guardarEnStorage(victimas);
     render();
 };
@@ -14,16 +14,16 @@ agregarVictima.addEventListener("click", (ingresar) => {
     ingresar.preventDefault();
     let inputVictimas = document.getElementById("inputVictima");
 
-    let ingresoVictima = victimas.length;
+    // let ingresoVictima = victimas.length;
 
     let nombreVictima = inputVictimas.value;
     if (inputVictimas.value == "") {
         setTimeout(alerta, 800);        
     } else {
         victimas.push({
-            id: ingresoVictima,
+            // id: ingresoVictima,
             playerName: nombreVictima,
-            isDead: false,
+            // isDead: false,
         });
     }
     inputVictimas.value = "";
@@ -56,7 +56,7 @@ const render = () => {
         (victima) =>
         (htmlVictimas += `<li >
                 <p class="victima">${victima.playerName} </p>
-                <button class="borraVictima" id="${victima.id}" >🗑️</button>
+                <button class="borraVictima" id="${victima.playerName}" >🗑️</button>
             </li>"`)
     );
     totalVictimas.innerHTML = htmlVictimas;

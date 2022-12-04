@@ -6,109 +6,92 @@ let victimas = JSON.parse(localStorage.getItem("victimasKey"));
 
 let listaVivos = victimas;
 let listaMuertos = [];
-let victimaSacrificada = "";
+var victimaSacrificada = "";
 
 //aleatorio
+console.log(listaVivos)
 
-function muerteVictima() {
-    if (listaVivos.length > 0) {
-        
-        let listaAleatoria = 0 + Math.floor(Math.random() * listaVivos.length);
+var medida;
+var indice;
 
-        let nombreVictimaAMorir = listaVivos[listaAleatoria].playerName;
 
-        victimaSacrificada = listaVivos[listaAleatoria].playerName;
+function muerteVictima(indice) {
 
-        console.log(nombreVictimaAMorir);
+    medida = listaVivos.length + 1;
+    indice = Math.floor(Math.random() * medida);
 
-        listaMuertos.push(listaVivos[listaAleatoria]);
+    for (let j = 0; j < listaVivos.length; j++){
+        if (indice == j) {
+            victimaSacrificada = listaVivos[j];
 
-        listaVivos.splice(listaAleatoria, 1);
-
-        console.log(listaVivos);
-        
-        return nombreVictimaAMorir;
-
-    } else {
-
+            console.log(victimaSacrificada);
+            
+        }
     }
-};
-//animacion duracion 
-const imgPlayer = document.getElementById("animacion");
-
-
-function fallecidoGif() {
-    imgPlayer.classList.remove("transleft");
-    imgPlayer.classList.add("transdown");
-    setTimeout( 1700);
+    // alert(victimaSacrificada);
+    return victimaSacrificada;
     
-};
+}
+
+function elegido(indice) {
+    listaVivos.splice(indice, 1);
+    animacionMuerte();
+}
 
 // animacion de censurado 
-const censurado = document.getElementById("animacion");
+let censurado = document.getElementById("animacion");
 
-function changeGiff(instruccion, nombreMuerto) {
+function animaCensura(instruccion, victimaSacrificada) {
     if (instruccion == true) {
         censurado.innerHTML = '<img id="animacion" src="src/censurado.png">'
     } else {
-        censurado.innerHTML = '<img id="animacion" src/animacion.gif"><h1>${nombreMuerto}</h1>'
+        censurado.innerHTML = '<img id="animacion" src/animacion.gif"><h1>${victimaSacrificada}</h1>'
     }
 }
 
-const sacrificarButton = document.getElementById("sacrificar");
+
+
+//sacrificar
+let sacrificarButton = document.getElementById("sacrificar");
 sacrificarButton.addEventListener("click", animacionMuerte);
 
 let sonidoMuere = new Audio("../sonidos/horror.mp3")
 
 function animacionMuerte() {
     if (listaVivos.length > 0) {
-        setTimeout(soloKill, 1700, victimaSacrificada);
-        open.classList.remove('vibrate_kill');
-        sonidoMuere.play()
-        fallecidoGif();
-        changeGiff(true);
+        setTimeout(soloKill(victimaSacrificada), 1700);
+        // sonidoMuere.play()
+        animaCensura(true,);
         setTimeout(changeGiff, 1000);
+        muerteVictima();
+        elegido(indice);
 
     } else {
         gameOver();
-        sacrificarButton.classList.add("shadow")
+        
     }
-    console.log(victimaSacrificada)
 };
 
-function nuevaVigtima() {
-    imgPlayer.classList.remove("shadow");
-    imgPlayer.classList.add("transleft");
-    imgPlayer.classList.remove("transdown");
-    let nombreVictimaAMorir = muerteVictima();
-    changeGiff(false, nombreVictimaAMorir);
-    open.classList.add('vibrate_kill')
-}
-
-function soloKill(nombreMuerto) {
+function soloKill(victimaSacrificada) {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        imageWigth: '20px',
+        // imageWigth: '20px',
         html: '<h1 class="font-PirataOne text-black"> La victima fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
         position: 'center',
         background: '#009FDE',
     });
-    
-    imgPlayer.classList.add("shadow");
-    
-    
 };
 
 const open = document.getElementById("sacrificar");
 
 function gameOver() {
-    console.log("aquie aparece el pupup")
+    console.log("game over")
     function showModal(){
         Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        ImageWigth: '50px',
+        // ImageWigth: '50px',
         html: '<h1 class="font-PirataOne text-black"> Ya No Hay Nadie <br></br> Para Sacrificar </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'EMPEZAR DE NUEVO ',
@@ -117,10 +100,9 @@ function gameOver() {
         imageUrl: '/src/logos.png',
         imageHeight: '50px',
         });
-        setTimeout(showModal, 1000)
-        fallecidoGif();
-        changeGiff(true);
     };
+    setTimeout(showModal, 2000)
+    animaCensura(true,);
 };
 
 
