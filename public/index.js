@@ -17,7 +17,7 @@ agregarVictima.addEventListener("click", (ingresar) => {
 
     let ingresoVictima = victimas.length;
 
-    let nombreVictima = inputVictimas.ariaValueMax;
+    let nombreVictima = inputVictimas.value;
     if (inputVictimas.value == "") {
         alert("ingrese el nombre de una victima");
     } else {
@@ -30,6 +30,8 @@ agregarVictima.addEventListener("click", (ingresar) => {
     inputVictimas.value = "";
     render();
     guardarEnStorage(victimas);
+    console.log(victimas)
+    console.log(nombreVictima)
 })
 
 const render = () => {
@@ -40,8 +42,8 @@ const render = () => {
     victimas.forEach(
         (victima) =>
         (htmlVictimas += `<li >
-                <p class="victima font-pirataOne">${victima.playName} </p>
-                <button id="borrarVictima" class="borraVictima" id="${victima.id}">caneca</button>
+                <p class="victima">${victima.playName} </p>
+                <button class="borraVictima" id="${victima.id}" >caneca</button>
             </li>"`)
     );
     totalVictimas.innerHTML = htmlVictimas;
@@ -49,13 +51,15 @@ const render = () => {
 };
 const borrarButton = (e) => {
     let eliminaVictima = document.querySelectorAll(".borraVictima");
-
+    console.log(eliminaVictima)
     eliminaVictima.forEach((botonCaneca) =>
         botonCaneca.addEventListener("click", eliminarVictima)
     );
+    
 };
 
 render();
+
 
 function guardarEnStorage(object) {
     let victimaLocal = object;
@@ -66,7 +70,6 @@ function guardarEnStorage(object) {
 
 
 
-//
 swal({
 
         title: "¡Bienvenido!",
@@ -81,5 +84,6 @@ swal({
             closeModal: false,
         },
     })
+
 
 
