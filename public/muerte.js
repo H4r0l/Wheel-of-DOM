@@ -4,6 +4,7 @@
 
 let victimas = JSON.parse(localStorage.getItem("victimasKey"));
 
+
 let listaVivos = victimas;
 let listaMuertos = [];
 let victimaSacrificada = "";
@@ -35,14 +36,25 @@ function muerteVictima() {
 };
 //animacion duracion 
 const imgPlayer = document.getElementById("animacion");
-let sonidoHorca = new Audio("../sonidos/inicio.piratas.mp3")
+
 
 function fallecidoGif() {
     imgPlayer.classList.remove("transleft");
     imgPlayer.classList.add("transdown");
     setTimeout( 1700);
-    sonidoHorca.play();
+    
 };
+
+// animacion de censurado 
+const censurado = document.getElementById("animacion");
+
+function changeGiff(instruccion, nombreMuerto) {
+    if (instruccion == true) {
+        censurado.innerHTML = '<img id="animacion" src="src/censurado.png">'
+    } else {
+        censurado.innerHTML = '<img id="animacion" src/animacion.gif"><h1>${nombreMuerto}</h1>'
+    }
+}
 
 const sacrificarButton = document.getElementById("sacrificar");
 sacrificarButton.addEventListener("click", animacionMuerte);
@@ -53,11 +65,10 @@ function animacionMuerte() {
     if (listaVivos.length > 0) {
         setTimeout(soloKill, 1700, victimaSacrificada);
         open.classList.remove('vibrate_kill');
-        
+        sonidoMuere.play()
         fallecidoGif();
-        // horca();
         changeGiff(true);
-        
+        setTimeout(changeGiff, 1000);
 
     } else {
         gameOver();
@@ -78,21 +89,17 @@ function nuevaVigtima() {
 function soloKill(nombreMuerto) {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        ImageWigth: '50px',
-        html: '<h1 class=""> ${nombreVictimaAMorir} Fue Sacrificada </h1>',
+        imageWigth: '20px',
+        html: '<h1 class="font-PirataOne text-black"> La victima fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
-        backdrop: `
-        #BFBFBF
-        left top
-        no-repeat
-        `,
         position: 'center',
+        background: '#009FDE',
     });
-    // modal_container.classList.remove("show");
+    
     imgPlayer.classList.add("shadow");
     
-    // modal_container.classList.add("show");
+    
 };
 
 const open = document.getElementById("sacrificar");
@@ -102,69 +109,20 @@ function gameOver() {
     function showModal(){
         Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        ImageWigth: '200px',
-        html: '<h1 class=""> Ya No Hay Nadie <br></br> Para Sacrificar </h1>',
+        ImageWigth: '50px',
+        html: '<h1 class="font-PirataOne text-black"> Ya No Hay Nadie <br></br> Para Sacrificar </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'EMPEZAR DE NUEVO ',
-        backdrop: `
-        #BFBFBF
-        left top
-        no-repeat
-        `,
+        background: '#009FDE',
         position: 'center',
         imageUrl: '/src/logos.png',
-        imageHeight: '250px',
+        imageHeight: '50px',
         });
-        setTimeout(showModal, 2000)
+        setTimeout(showModal, 1000)
         fallecidoGif();
-        // horca();
         changeGiff(true);
     };
 };
 
-// animacion de censurado 
-const censurado = document.getElementById("animacion");
-
-function changeGiff(instruccion, nombreMuerto) {
-    if (instruccion == true) {
-        censurado.innerHTML = '<img id="animacion" src="src/logo-lily.png"></img>'
-    } else {
-        censurado.innerHTML = '<img id="animacion" src="src/logo-sofi.png"><h1>${nombreMuerto}</h1>'
-    }
-}
 
 
-// class alertaMuerto {
-//     constructor() {
-//         this.muerte();
-//     };
-//     muerte() {
-//         this.mensajeVentanaMuerte();
-//     };
-//     mensajeVentanaMuerte() {
-//         Swal.fire({
-//             imageUrl: '/src/pixil-frame-alerts.png',
-//             ImageWigth: '200px',
-//             html: '<h1 class=""> $ Fue Sacrificada </h1>',
-//             confirmButtonColor: '#034C8C',
-//             confirmButtonText: 'SEGUIR SACRIFICANDO',
-//             backdrop: '#034C8C',
-//             position: 'center',
-
-
-            
-
-//         });
-//     };
-// }
-
-
-
-
-
-
-
-
-
-
-// const game = new Juego();
