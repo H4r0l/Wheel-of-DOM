@@ -53,7 +53,7 @@ function animacionMuerte() {
     if (listaVivos.length > 0) {
         setTimeout(soloKill, 1700, victimaSacrificada);
         open.classList.remove('vibrate_kill');
-        // sonidoMuere.play(1)
+        sonidoMuere.play(1)
         fallecidoGif();
         // horca();
         changeGiff(true);
@@ -94,6 +94,7 @@ function soloKill(nombreMuerto) {
     
     // modal_container.classList.add("show");
 };
+
 const open = document.getElementById("sacrificar");
 
 function gameOver() {
