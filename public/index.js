@@ -54,11 +54,10 @@ const render = () => {
     
     victimas.forEach(
         (victima) =>
-        (htmlVictimas += `<li id="listaVictimas" class="inline-flex list-none ">
-                    <p class="victima"> </p>
-                    <button id="borrarVictima" class="borraVictima" id="${victima.playerName}">🗑️</button>
-    
-                </li>`)
+         (htmlVictimas += `<li >
+                <p class="victima">${victima.playerName} </p>
+                <button class="borraVictima" id="${victima.playerName}" >🗑️</button>
+            </li>"`)
     );
     totalVictimas.innerHTML = htmlVictimas;
     borrarButton();
