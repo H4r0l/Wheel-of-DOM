@@ -59,7 +59,6 @@ const render = () => {
                 <button class="borraVictima" id="${victima.playerName}" >🗑️</button>
             </li>"`)
     );
-        
     totalVictimas.innerHTML = htmlVictimas;
     borrarButton();
 };
@@ -83,7 +82,7 @@ function guardarEnStorage(object) {
 
 
 
-//
+
 
 
 
