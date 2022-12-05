@@ -1,5 +1,7 @@
 // import { default as Swal } from "sweetalert2";
 
+const { default: Swal } = require("sweetalert2");
+
 // const { default: Swal } = require("sweetalert2");
 
 let victimas = JSON.parse(localStorage.getItem("victimasKey"));
@@ -14,7 +16,6 @@ console.log(listaVivos)
 var medida;
 var indice;
 
-
 function muerteVictima(indice) {
 
     medida = listaVivos.length + 1;
@@ -25,10 +26,8 @@ function muerteVictima(indice) {
             victimaSacrificada = listaVivos[j];
 
             console.log(victimaSacrificada);
-            
         }
     }
-    // alert(victimaSacrificada);
     return victimaSacrificada;
     
 }
@@ -39,13 +38,14 @@ function elegido(indice) {
 }
 
 // animacion de censurado 
-let censurado = document.getElementById("animacion");
+var censurado = document.getElementById("animacionFallece");
 
 function animaCensura(instruccion, victimaSacrificada) {
     if (instruccion == true) {
-        censurado.innerHTML = '<img id="animacion" src="src/censurado.png">'
+        censurado.innerHTML = '<img id="animacion" src="src/censurado.png"><h1></h1>';
     } else {
-        censurado.innerHTML = '<img id="animacion" src/animacion.gif"><h1>${victimaSacrificada}</h1>'
+        censurado.innerHTML = '<img id="animacion" src="/animacion.gif"><h1>${victimaSacrificada}</h1>';
+        
     }
 }
 
@@ -60,9 +60,9 @@ let sonidoMuere = new Audio("../sonidos/horror.mp3")
 function animacionMuerte() {
     if (listaVivos.length > 0) {
         setTimeout(soloKill(victimaSacrificada), 1700);
-        // sonidoMuere.play()
+        sonidoMuere.play()
         animaCensura(true,);
-        setTimeout(changeGiff, 1000);
+        setTimeout(animaCensura, 1000);
         muerteVictima();
         elegido(indice);
 
@@ -73,9 +73,10 @@ function animacionMuerte() {
 };
 
 function soloKill(victimaSacrificada) {
+    // Swal.fire(victimaSacrificada, "fue sacrificada");
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        // imageWigth: '20px',
+        imageHeight: '100px',
         html: '<h1 class="font-PirataOne text-black"> La victima fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
@@ -91,14 +92,14 @@ function gameOver() {
     function showModal(){
         Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        // ImageWigth: '50px',
         html: '<h1 class="font-PirataOne text-black"> Ya No Hay Nadie <br></br> Para Sacrificar </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'EMPEZAR DE NUEVO ',
         background: '#009FDE',
         position: 'center',
-        imageUrl: '/src/logos.png',
-        imageHeight: '50px',
+        // Text: 'creado por:',
+        // imageUrl: '/src/logos.png',
+        imageHeight: '100px',
         });
     };
     setTimeout(showModal, 2000)
