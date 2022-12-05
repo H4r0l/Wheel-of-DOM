@@ -8,7 +8,7 @@ module.exports = {
       },
       fontFamily: {
         Alexandria: ['"Alexandria","sans-serif"'],
-        PirataOne: ['"Pirata One", cursive'] 
+        PirataOne: ['"Pirata One", cursive']
       }
     },
   },

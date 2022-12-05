@@ -7,7 +7,7 @@
     <script src="/sweetalert2.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/output.css">
-    <link href="img/LogoWhite.png" rel="icon" type="image/x-icon">
+    <link href="img/LogoWhite.png" rel="icon" type="image/x-icon">    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alexandria&family=Pirata+One&display=swap" rel="stylesheet">
 
     <title>Wheel of DOM</title>
 
@@ -19,19 +19,17 @@
 
     </div>
     
+        
 
-    <div id="animacionFallece" >
-        <img id="animacion" src="src/animacion.gif">
-        <h1 id="nombre"></h1>
+    <div class="grid h-screen place-items-center">
+        
+        <img class="z-10 absolute pl-50 xl:w-2/4 " id="horca" src="./Img/hd.png">
+        <img id="animacion" class="z-0 p-0 m-0" src="src/animacion.gif">
+        
     </div>
 
-
-    <div class="justify-center">
-        <img class="pl-50 sm': '640px' w-auto" id="horca" src="./Img/hd.png">
-    </div>
-
-    <div class="">
-        <button class="border-solid border-red-900 bg-red-900 font-Alexandria p-2" id="sacrificar">SACRIFICAR 💀</button>
+    <div class="bg-red-700">
+        <button style="background-color: rgb(147, 5, 5);" class=" rounded-lg m-4 text-white font-Alexandria p-2 xl:text-3xl id="sacrificar">SACRIFICAR 💀</button>
     </div>
     <audio controls="" autoplay loop>
         <source src="./sonidos/Suspenso.mp3" type="audio/mp3" />

@@ -7,33 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/output.css">
     <link href="img/LogoWhite.png" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alexandria&family=Pirata+One&display=swap" rel="stylesheet">
     <title>Wheel of DOM</title>
     
 </head>
 
-<body style="background-image: url(../Img/peakpx.jpg );">
+<body style="background-image: url(../Img/peakpx.jpg );" >
 
+    <div class="grid h-screen place-items-center p-2">
+        <div class="border-4 border-indigo-800 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg xl:w-1/4">
+            <div class="inline-flex">
+                <div>
+                    <img src="/src/pixil-frame-alerts.png" class="scale w-3/4 m-2 xl:w-4/4 xl:m-12 ">
+                </div>
+                <div class="bg-white border-solid border-2 border-indigo-800 rounded-lg m-4 p-2 xl:text-3xl xl:h-26 xl:m-8 xl:p-8">
+                    <h1 class="font-PirataOne text-4xl text-center">¡Bienvenido!</h1>
+                    <p class="font-PirataOne text-center text-2xl">Ingresa los nombres de las victimas:</p>
+                </div>
+            </div>
+            <div class="">
+                <input id="inputVictima"  type="text" placeholder="Nombre:" class="p-2 m-2 rounded-lg">
+                <button id="agregar" class="p-2 font-Alexandria bg-sky-900 text-white rounded-lg shadow-lg shadow-indigo-500/50 hover:bg-sky-500">Agregar</button>
+                <a href="/horca.html">
+                    <button id="inicio" class="font-Alexandria bg-yellow-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 hover:bg-yellow-700">Inicio</button>
+                </a>
+            </div>
+            <div class="">
+                <li id="listaVictimas" class="inline-flex list-none ">
+                    <p class="victima"> </p>
+                    <button id="borrarVictima" class="borraVictima"></button>
     
-    <div class="border-double border-4 border-indigo-800 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg ">
-        <img src="/src/pixil-frame-alerts.png" class="" width="50%">
-        <div class="bg-white border-solid border-2 border-indigo-800 rounded-lg p-1">
-        <h1 class="font-PirataOne text-4xl text-center">¡Bienvenido!</h1>
-        <p class="font-PirataOne text-center">Ingresa los nombres de las victimas:</p>
+                </li>
+            </div>
+    
         </div>
-        <input id="inputVictima" type="text" placeholder="Nombre:">
-        <button id="agregar" class="p-2 font-Alexandria bg-sky-900 text-white rounded-lg shadow-lg shadow-indigo-500/50 hover:bg-sky-500">Agregar</button>
-        <a href="/horca.html">
-            <button id="inicio" class="font-Alexandria bg-yellow-500 p-2 rounded-lg shadow-lg shadow-indigo-500/50 hover:bg-yellow-700">Inicio</button>
-        </a>
-        <div  class="">
-            <li id="listaVictimas">
-                <p class="victima"> </p>
-
-                <button id="borrarVictima" class="borraVictima">🗑️</button>
-
-            </li>
-        </div>
-
     </div>
     <audio controls="" autoplay loop>
         <source src="./sonidos/inicio.piratas.mp3" type="audio/mp3" />
