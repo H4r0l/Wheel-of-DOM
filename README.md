@@ -40,7 +40,8 @@ Que cosas necesitas para instalar el software y como verla en el dispositivo loc
 ### Instalación 🔧
 
 - Como se debe observar en el despliegue
-![Version]()
+
+![Version en diferentes pantallas](https://github.com/H4r0l/Wheel-of-DOM/blob/11109bbdc142b440efd92b5fe8c73fad0d25f5ed/Img/modo%20responsive.png)
 
 ## Despliegue 📦
 
