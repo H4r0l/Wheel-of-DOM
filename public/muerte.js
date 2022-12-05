@@ -39,7 +39,7 @@ function elegido(indice) {
 }
 
 // animacion de censurado 
-let censurado = document.getElementById("animacion");
+let censurado = document.getElementById("censura");
 
 function animaCensura(instruccion, victimaSacrificada) {
     if (instruccion == true) {
@@ -60,7 +60,7 @@ let sonidoMuere = new Audio("../sonidos/horror.mp3")
 function animacionMuerte() {
     if (listaVivos.length > 0) {
         setTimeout(soloKill(victimaSacrificada), 1700);
-        // sonidoMuere.play()
+        sonidoMuere.play()
         animaCensura(true,);
         setTimeout(animaCensura, 1000);
         muerteVictima();
