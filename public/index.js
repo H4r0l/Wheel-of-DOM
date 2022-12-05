@@ -36,7 +36,7 @@ agregarVictima.addEventListener("click", (ingresar) => {
 function alerta() {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        imageWigth: '20px',
+        imageHeight:'100px',
         html: '<h1 class="font-PirataOne text-black"> ingrese el nombre de una victima </h1>',
         confirmButtonColor: '#034C8C',
         position: 'center',
