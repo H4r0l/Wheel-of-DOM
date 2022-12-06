@@ -13,22 +13,24 @@
 
 </head>
 
-<body style="background-image: url(./Img/peakpx.jpg);">
+<body style="background-image: url(./Img/peakpx.png);">
 
     <div id="horca" >
 
     </div>
 
     <div class="grid h-screen place-items-center">
-        <img class="z-10 absolute pl-50 xl:w-2/4 " id="horca" src="./Img/hd.png">
-    </div>
-
-    <div class="grid h-screen place-items-center">
         <img id="animacion" class="z-10 p-0 m-0" src="src/animacion.gif" width="20%">
     </div>
 
+    <div id="censura" class="grid h-screen place-items-center">
+        
+        <img id="animacion" class="z-0 p-0 m-0" src="src/animacion.gif" width="20%">
+        <h1 id="nombre"></h1>
+    </div>
+
     <div class="bg-red-700">
-        <button style="background-color: rgb(147, 5, 5);" class=" rounded-lg m-4 text-white font-Alexandria p-2 xl:text-3xl id="sacrificar">SACRIFICAR 💀</button>
+        <button style="background-color: rgb(147, 5, 5);" class=" rounded-lg m-4 text-white font-Alexandria p-2 xl:text-3xl" id="sacrificar">SACRIFICAR 💀</button>
     </div>
     <audio controls="" autoplay loop>
         <source src="./sonidos/Suspenso.mp3" type="audio/mp3" />

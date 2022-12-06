@@ -39,7 +39,7 @@ function elegido(indice) {
 }
 
 // animacion de censurado 
-let censurado = document.getElementById("animacion");
+let censurado = document.getElementById("censura");
 
 function animaCensura(instruccion, victimaSacrificada) {
     if (instruccion == true) {
@@ -60,9 +60,9 @@ let sonidoMuere = new Audio("../sonidos/horror.mp3")
 function animacionMuerte() {
     if (listaVivos.length > 0) {
         setTimeout(soloKill(victimaSacrificada), 1700);
-        // sonidoMuere.play()
+        sonidoMuere.play()
         animaCensura(true,);
-        setTimeout(changeGiff, 1000);
+        setTimeout(animaCensura, 1000);
         muerteVictima();
         elegido(indice);
 
@@ -75,7 +75,7 @@ function animacionMuerte() {
 function soloKill(victimaSacrificada) {
     Swal.fire({
         imageUrl: '/src/pixil-frame-alerts.png',
-        // imageWigth: '20px',
+        imageHeight: '100px',
         html: '<h1 class="font-PirataOne text-black"> La victima fue Sacrificada </h1>',
         confirmButtonColor: '#034C8C',
         confirmButtonText: 'SEGUIR SACRIFICANDO',
@@ -97,8 +97,7 @@ function gameOver() {
         confirmButtonText: 'EMPEZAR DE NUEVO ',
         background: '#009FDE',
         position: 'center',
-        imageUrl: '/src/logos.png',
-        imageHeight: '50px',
+        imageHeight: '100px',
         });
     };
     setTimeout(showModal, 2000)
